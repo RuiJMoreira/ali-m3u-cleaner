@@ -11,8 +11,6 @@ f = open("/usr/lista_iptv/lista_limpa.m3u", 'w')
 sys.stdout = f
 print ("#EXTM3U")
 for line in lista:
-    if line.strip("\n") != 'group-title="PT General",PT--':
-        print ("")
     if 'group-title="PT General",PT' in line:#canais pt
         print(line, end="")
         print(next(lista), end="")
